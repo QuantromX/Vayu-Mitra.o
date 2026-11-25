@@ -1,0 +1,15 @@
+{
+  "id": "mumbai-asthma-patient",
+  "label": "Mumbai asthma patient",
+  "city": {
+    "id": 1275339,
+    "name": "Mumbai",
+    "admin1": "Maharashtra",
+    "latitude": 19.076,
+    "longitude": 72.8777
+  },
+  "household": ["asthma_heart"],
+  "lifestyle": "runner_walker",
+  "hasPurifier": true,
+  "language": "en"
+}

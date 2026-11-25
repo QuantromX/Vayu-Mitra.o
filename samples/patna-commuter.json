@@ -1,0 +1,20 @@
+{
+  "id": "patna-commuter",
+  "label": "Patna commuter",
+  "labelHi": "पटना: दैनिक यात्री",
+  "subtitle": "Outdoor worker · Two-wheeler · No purifier",
+  "subtitleHi": "बाहरी कार्य · बाइक यात्रा · बिना प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1260086,
+      "name": "Patna",
+      "admin1": "Bihar",
+      "latitude": 25.5941,
+      "longitude": 85.1376
+    },
+    "household": ["outdoor_worker"],
+    "lifestyle": "commute_bike",
+    "hasPurifier": false,
+    "language": "en"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "jaipur-runner",
+  "label": "Jaipur runner",
+  "labelHi": "जयपुर: दैनिक धावक",
+  "subtitle": "General · Runs/walks daily · Purifier",
+  "subtitleHi": "सामान्य · दैनिक दौड़/सैर · प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1269515,
+      "name": "Jaipur",
+      "admin1": "Rajasthan",
+      "latitude": 26.9124,
+      "longitude": 75.7873
+    },
+    "household": [],
+    "lifestyle": "runner_walker",
+    "hasPurifier": true,
+    "language": "en"
+  }
+}

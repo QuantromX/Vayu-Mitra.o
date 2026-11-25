@@ -1,0 +1,20 @@
+{
+  "id": "chennai-pregnant",
+  "label": "Chennai expecting family",
+  "labelHi": "चेन्नई: गर्भवती देखभाल",
+  "subtitle": "Pregnant · Car commute · Purifier",
+  "subtitleHi": "गर्भवती · कार यात्रा · प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1264527,
+      "name": "Chennai",
+      "admin1": "Tamil Nadu",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "household": ["pregnant"],
+    "lifestyle": "commute_car",
+    "hasPurifier": true,
+    "language": "en"
+  }
+}

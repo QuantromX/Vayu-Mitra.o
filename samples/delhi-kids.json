@@ -1,0 +1,20 @@
+{
+  "id": "delhi-kids",
+  "label": "Delhi family with kids",
+  "labelHi": "दिल्ली: बच्चों वाला परिवार",
+  "subtitle": "Kids · Metro commute · No purifier",
+  "subtitleHi": "बच्चे · मेट्रो यात्रा · बिना प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1273294,
+      "name": "New Delhi",
+      "admin1": "Delhi",
+      "latitude": 28.6139,
+      "longitude": 77.209
+    },
+    "household": ["kids"],
+    "lifestyle": "commute_metro",
+    "hasPurifier": false,
+    "language": "en"
+  }
+}

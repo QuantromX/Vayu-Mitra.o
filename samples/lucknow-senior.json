@@ -1,0 +1,20 @@
+{
+  "id": "lucknow-senior",
+  "label": "Lucknow senior",
+  "labelHi": "लखनऊ: वरिष्ठ नागरिक",
+  "subtitle": "Seniors · Work from home · Purifier",
+  "subtitleHi": "वरिष्ठ · घर से काम · प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1264733,
+      "name": "Lucknow",
+      "admin1": "Uttar Pradesh",
+      "latitude": 26.8467,
+      "longitude": 80.9462
+    },
+    "household": ["seniors"],
+    "lifestyle": "wfh",
+    "hasPurifier": true,
+    "language": "en"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bengaluru-wfh",
+  "label": "Bengaluru work-from-home",
+  "labelHi": "बेंगलुरु: घर से काम",
+  "subtitle": "General · Work from home · No purifier",
+  "subtitleHi": "सामान्य · घर से काम · बिना प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1277333,
+      "name": "Bengaluru",
+      "admin1": "Karnataka",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "household": [],
+    "lifestyle": "wfh",
+    "hasPurifier": false,
+    "language": "en"
+  }
+}

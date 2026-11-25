@@ -1,0 +1,264 @@
+@import 'tailwindcss';
+
+:root {
+  --font-display: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* 8px grid spacing & radius tokens */
+  --vm-radius-card: 24px;
+  --vm-radius-hero: 28px;
+  --vm-radius-control: 12px;
+  --vm-blur: 14px;
+  --vm-glow: rgba(45, 212, 191, 0.28);
+
+  /* Dynamic theme defaults (updated live by theme.ts) */
+  --vm-sky-top: #062c30;
+  --vm-sky-mid: #0b4a4e;
+  --vm-sky-bottom: #116d66;
+  --vm-accent: #2dd4bf;
+  --vm-accent-strong: #14b8a6;
+  --vm-accent-contrast: #032320;
+  --vm-surface-glass: rgba(6, 31, 35, 0.78);
+  --vm-surface-elevated: rgba(10, 44, 49, 0.9);
+  --vm-border-glass: rgba(153, 246, 228, 0.24);
+  --vm-scrim: rgba(3, 18, 20, 0.62);
+  --vm-text-primary: #f8fafc;
+  --vm-text-secondary: #e2e8f0;
+  --vm-text-muted: #cbd5e1;
+  --vm-haze-color: rgba(167, 243, 208, 0.18);
+  --vm-haze-opacity: 0.15;
+  --vm-sun-color: #fef08a;
+  --vm-sun-glow: rgba(254, 240, 138, 0.52);
+  --vm-ring-track: rgba(255, 255, 255, 0.14);
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--vm-sky-top);
+  color: var(--vm-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.vm-theme-transition {
+  transition:
+    background-color 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 500ms ease;
+}
+
+/* Signature glass elevation with subtle inner top highlight, 1px translucent border, soft shadow & faint grain */
+.vm-glass-card {
+  position: relative;
+  border-radius: var(--vm-radius-card);
+  background:
+    linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.085) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    ),
+    var(--vm-surface-glass);
+  border: 1px solid var(--vm-border-glass);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 18px 40px -16px rgba(0, 0, 0, 0.56);
+}
+
+/* Faint tactile film grain texture (zero SVG feTurbulence GPU/CPU raster stall) */
+.vm-grain-overlay {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.055) 0.65px, transparent 0.65px),
+    radial-gradient(rgba(0, 0, 0, 0.08) 0.65px, transparent 0.65px);
+  background-size:
+    4px 4px,
+    5px 5px;
+  background-position:
+    0 0,
+    2px 2px;
+}
+
+/* Shimmer loader */
+@keyframes vm-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.vm-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.06) 75%
+  );
+  background-size: 200% 100%;
+  animation: vm-shimmer 1.6s linear infinite;
+}
+
+/* Smooth disclosure height animation using CSS Grid */
+.vm-disclosure-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 180ms ease;
+}
+
+.vm-disclosure-grid[data-open='true'] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.vm-disclosure-inner {
+  overflow: hidden;
+}
+
+/* Weather ambient CSS keyframes (subtle fallback / reduced canvas accompaniment) */
+@keyframes vm-rain-fall {
+  0% {
+    transform: translate3d(0, -15vh, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.42;
+  }
+  85% {
+    opacity: 0.42;
+  }
+  100% {
+    transform: translate3d(-18px, 100vh, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes vm-fog-drift {
+  0%,
+  100% {
+    transform: translate3d(-3%, 0, 0);
+  }
+  50% {
+    transform: translate3d(3%, 0, 0);
+  }
+}
+
+@keyframes vm-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes vm-cloud-drift {
+  0%,
+  100% {
+    transform: translate3d(-2%, 0, 0);
+  }
+  50% {
+    transform: translate3d(2%, 0, 0);
+  }
+}
+
+@keyframes vm-thunder-flash {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.24;
+  }
+  92% {
+    opacity: 0.04;
+  }
+  94% {
+    opacity: 0.3;
+  }
+}
+
+.vm-rain-streak {
+  animation: vm-rain-fall 2.2s linear infinite;
+}
+
+.vm-fog-layer {
+  animation: vm-fog-drift 16s ease-in-out infinite;
+}
+
+.vm-star {
+  animation: vm-twinkle 4.5s ease-in-out infinite;
+}
+
+.vm-cloud {
+  animation: vm-cloud-drift 22s ease-in-out infinite;
+}
+
+.vm-thunder {
+  animation: vm-thunder-flash 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .vm-theme-transition,
+  .vm-rain-streak,
+  .vm-fog-layer,
+  .vm-star,
+  .vm-cloud,
+  .vm-thunder,
+  .vm-shimmer,
+  .vm-disclosure-grid {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --vm-surface-glass: rgba(2, 6, 23, 0.94);
+    --vm-surface-elevated: rgba(2, 6, 23, 0.98);
+    --vm-border-glass: rgba(255, 255, 255, 0.68);
+    --vm-scrim: rgba(0, 0, 0, 0.85);
+    --vm-text-secondary: #ffffff;
+    --vm-text-muted: #f1f5f9;
+  }
+
+  .vm-glass-card {
+    border-width: 1.5px;
+    border-color: rgba(255, 255, 255, 0.72);
+  }
+
+  :focus-visible {
+    outline: 3px solid #ffffff !important;
+    outline-offset: 2px !important;
+  }
+}

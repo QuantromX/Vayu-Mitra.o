@@ -1,0 +1,6 @@
+{
+  "name": "VayuMitra",
+  "description": "Breath Companion: live Indian air quality action engine turning Open-Meteo data into personalized, explained guidance for families.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

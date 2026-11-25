@@ -1,0 +1,20 @@
+{
+  "id": "kolkata-outdoor",
+  "label": "Kolkata outdoor worker",
+  "labelHi": "कोलकाता: बाहरी कामगार",
+  "subtitle": "Outdoor worker · Bus commute · No purifier",
+  "subtitleHi": "बाहरी कार्य · बस यात्रा · बिना प्यूरीफायर",
+  "profile": {
+    "city": {
+      "id": 1275004,
+      "name": "Kolkata",
+      "admin1": "West Bengal",
+      "latitude": 22.5726,
+      "longitude": 88.3639
+    },
+    "household": ["outdoor_worker"],
+    "lifestyle": "commute_bus",
+    "hasPurifier": false,
+    "language": "en"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "delhi-family-kids",
+  "label": "Delhi family with kids",
+  "city": {
+    "id": 1273294,
+    "name": "New Delhi",
+    "admin1": "Delhi",
+    "latitude": 28.6139,
+    "longitude": 77.209
+  },
+  "household": ["kids"],
+  "lifestyle": "commute_metro",
+  "hasPurifier": false,
+  "language": "en"
+}
